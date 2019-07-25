@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: events
@@ -11,7 +13,7 @@
 #
 
 class Event < ApplicationRecord
-  has_many :attendees, class_name:"User", foreign_key: "event_id"
+  has_many :attendees, class_name: "User", foreign_key: "event_id"
   has_many :comments, as: :commentable
   has_many_attached :images
 end
