@@ -26,5 +26,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :book
+  has_many :comment
+  has_one_attached :avatar
+
   validates :email, uniqueness: true, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 end
