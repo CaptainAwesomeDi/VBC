@@ -7,10 +7,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%= root_path %>">主页 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="<%= events_path %>">活动</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= books_path %>">书籍</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= posts_path %>">文章</a>
       </li>
   </div>
   <% if user_signed_in? %>

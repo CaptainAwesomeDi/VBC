@@ -18,6 +18,7 @@
 
 class Post < ApplicationRecord
   belongs_to :user
-  has_many :comment, as: :commentable
+  has_many :comments, as: :commentable
   has_many_attached :images
+  has_rich_text :content
 end
