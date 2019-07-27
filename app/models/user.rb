@@ -30,8 +30,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_and_belongs_to_many :books
-  has_many :comments
+  has_many :books, through: :books_user
+  has_many :comments, as: :commentable
   has_one_attached :avatar
 
   validates :email, uniqueness: true, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }

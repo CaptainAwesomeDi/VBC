@@ -7,3 +7,6 @@
 valid:
   email: user@example.com
   encrypted_password: what
+  username: testuser
+  first_name: di
+  last_name: wu

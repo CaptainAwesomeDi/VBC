@@ -12,7 +12,7 @@
 #
 
 class Book < ApplicationRecord
-  has_and_belongs_to_many :users
+  has_many :users, through: :books_user
   has_many :comments, as: :commentable
   has_many_attached :images
 end
