@@ -5,17 +5,22 @@
   
   <div class="field">
     <%= f.label :username,"用户名" %><br />
-    <%= f.text_field :username, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :username, autofocus: true  %>
   </div>
 
   <div class="field">
     <%= f.label :last_name, "姓" %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :last_name, autofocus: true %>
   </div>
 
   <div class="field">
     <%= f.label :first_name, "名" %><br />
-    <%= f.text_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :email, autofocus: true  %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :area, "Area" %><br />
+    <%= f.select :area, %w[Vancouver Burnaby Richmond Coquitlam Other], autofocus: true %>
   </div>
 
   <div class="field">
