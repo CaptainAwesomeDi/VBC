@@ -17,11 +17,11 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<%= posts_path %>">文章</a>
-        </li> 
+        </li>
   </div>
   <% if user_signed_in? %>
   <div>
-    <p>Welcome <%= current_user.email %></p>
+    <p><%= I18n.t 'welcome' %> <%= current_user.email %></p>
     <%= button_to destroy_user_session_path, method: :delete do %>
       Logout
     <% end%>

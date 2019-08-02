@@ -2,12 +2,19 @@
   font-family: "Noto Serif SC", serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .content {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   text-align: center;
-  
+  height: 100%;
+
   .center-image-text {
     position: absolute;
     top: 50%;
@@ -21,13 +28,18 @@
   }
 
   @keyframes fadein {
-    from { 
-            opacity: 0;
-            top: 30%
-          }
-    to   { 
-            opacity: 1; 
-            top: 50%
-         }
+    from {
+      opacity: 0;
+      top: 30%;
+    }
+    to {
+      opacity: 1;
+      top: 50%;
+    }
   }
+}
+
+body {
+  background-image: url("../../../assets/images/book.jpg");
+  background-size: 100%;
 }
